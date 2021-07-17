@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Londrina+Sketch&display=swap');
+
+:root {
+    --background-black-0: #141414;
+    --background-black-1: #202020;
+    --background-black-2: #313131;
+    --primary-text-color: #aa0000;
+    --primary-text-color-light: #f10000;
+    --primary-text-color-dark: #7c0000;
+    --white-text-color: #ebebeb;
+}
+
+.modal {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+.modal__close {
+    width: 32px;
+    height: 32px;
+    border-radius: 16px;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 32px;
+    text-align: center;
+    transform: translate(50%, -50%);
+}
+
+.modal__overlay, .modal__form {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.modal__overlay {
+    height: 100%;
+    background-color: rgb(0 0 0 / 0.7);
+    z-index: 1000;
+}
+
+.modal__form {
+    width: 40%;
+    background-color: var(--background-black-1);
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2000;
+    border-radius: 16px;
+}
+
+.greetings {
+    text-align: center;
+}
+
+.greetings__title {
+    color: var(--primary-text-color-light);
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+.greetings__text {
+    width: 50%;
+    display: inline-block;
+    color: var(--white-text-color);
+    margin-bottom: 8px;
+}
+
+.button__wrapper {
+    display: inline-block;
+    width: 100%;
+}
+
+.form__label {
+    display: flex;
+    flex-direction: column;
+}
+
+.form__field {
+    background-color: var(--background-black-2);
+    border: 3px solid var(--background-black-0);
+    border-radius: 16px;
+    color: var(--white-text-color);
+    font-size: 18px;
+    margin-right: 24px;
+    outline: none;
+    padding: 8px 0;
+    padding-left: 8px;
+}
+
+.form__field:focus {
+    border: 3px solid var(--primary-text-color);
+}
+
+.form__field::placeholder {
+    font-weight: bold;
+}
+
+.form__button {
+    background-color: var(--primary-text-color);
+    border: none;
+    color: var(--white-text-color);
+    cursor: pointer;
+}
+
+.form__button:hover {
+    background-color: var(--primary-text-color-light);
+}
+
+@media screen and (max-width: 1024px) {
+
+    .modal__form {
+        width: 60%;
+    }
+    
+}
+
+@media screen and (max-width: 768px) {
+
+    .modal__form {
+        width: 400px;
+    }
+    
+}
+
+@media screen and (max-width: 500px) {
+
+    .modal__form {
+        width: 300px;
+    }
+    
+}
